@@ -11,7 +11,7 @@ function UserList() {
 
     let fetchUsers = async () => {
         try {
-            let userData = await axios.get("http://localhost:3001/users")
+            let userData = await axios.get("https://model-react.herokuapp.com/users")
             setUserList(userData.data)
         } catch (error) {
             console.log(error)
@@ -22,7 +22,7 @@ function UserList() {
         try {
             let result = window.confirm("are you sure Do you want to Delete! ") 
             if (result) {
-                await axios.delete(`http://localhost:3001/user/${id}`)
+                await axios.delete(`https://model-react.herokuapp.com/${id}`)
                
                 fetchUsers()
             }
