@@ -47,7 +47,7 @@ function UserList() {
             <table class="table mt-5">
                 <thead class="table-dark">
                     <tr>
-                        <th>Id</th>
+                       
                         <th>Name</th>
                         <th>Age</th>
                         <th>Email</th>
@@ -61,7 +61,7 @@ function UserList() {
                     {
                         userList.map((user) => {
                             return <tr>
-                                <th scope="row">{user.id}</th>
+                               
                                 <td>{user.name}</td>
                                 <td>{user.age}</td>
                                 <td>{user.email}</td>
