@@ -22,7 +22,7 @@ function UserList() {
         try {
             let result = window.confirm("are you sure Do you want to Delete! ") 
             if (result) {
-                await axios.delete(`https://model-react.herokuapp.com/${id}`)
+                await axios.delete(`https://model-react.herokuapp.com/user/${id}`)
                
                 fetchUsers()
             }
