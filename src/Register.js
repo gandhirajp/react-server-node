@@ -13,7 +13,7 @@ function Register() {
         },
         onSubmit: async (values) => {
             try {
-                let loginData = await axios.post(" http://localhost:3001/register", values)
+                let loginData = await axios.post(" https://model-react.herokuapp.com/register", values)
                 navigate("/")
 
             } catch (error) {
