@@ -22,10 +22,10 @@ function EditUser() {
             try {
                 delete values._id;
 
-                delete values["_id"]
+                // delete values["_id"]
 
                 await axios.put(`https://model-react.herokuapp.com/user/${params.id}`, values)
-                navigate("/")
+                navigate("/userlist")
             } catch (error) {
                 console.log(error)
             }

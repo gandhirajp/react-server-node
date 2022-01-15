@@ -47,7 +47,6 @@ function UserList() {
             <table class="table mt-5">
                 <thead class="table-dark">
                     <tr>
-                       
                         <th>Name</th>
                         <th>Age</th>
                         <th>Email</th>

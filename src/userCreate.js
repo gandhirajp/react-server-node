@@ -14,7 +14,7 @@ function UserCreate() {
         onSubmit: async values => {
            try {
            await axios.post("https://model-react.herokuapp.com/create-user",values) 
-           navigate("/")
+           navigate("/userlist")
            } catch (error) {
                console.log(error)
            }
