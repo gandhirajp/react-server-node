@@ -6,14 +6,14 @@ import { useNavigate,Link } from 'react-router-dom';
 
 function Login() {
     const navigate = useNavigate()
-    const formik = useFormik({
+    const formik = useFormik({  
         initialValues: {
             email: '',
             password: ''
         },
         onSubmit: async (values) => {
             try {
-                 let loginData = await axios.post(" https://mern-model.herokuapp.com//login", values)
+                 let loginData = await axios.post(" https://mern-model.herokuapp.com/login", values)
                // let loginData = await axios.post("http://localhost:3001/login", values)
                                                     
                 window.localStorage.setItem("my_token", loginData.data.token)
