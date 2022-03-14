@@ -6,7 +6,7 @@ import { useNavigate, useParams } from "react-router-dom"
 function EditUser() {
     let params = useParams();
     useEffect(async () => {
-        let userData = await axios.get(`https://mern-model.herokuapp.com//user/${params.id}`)
+        let userData = await axios.get(`https://mern-model.herokuapp.com/user/${params.id}`)
         formik.setValues(userData.data)
     }, [])
 
@@ -24,7 +24,7 @@ function EditUser() {
 
                 // delete values["_id"]
 
-                await axios.put(`https://mern-model.herokuapp.com//user/${params.id}`, values)
+                await axios.put(`https://mern-model.herokuapp.com/user/${params.id}`, values)
                 navigate("/userlist")
             } catch (error) {
                 console.log(error)
