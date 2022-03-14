@@ -13,8 +13,9 @@ function Login() {
         },
         onSubmit: async (values) => {
             try {
-                let loginData = await axios.post(" https://model-react.herokuapp.com/login", values)
-
+                 let loginData = await axios.post(" https://model-react.herokuapp.com/login", values)
+               // let loginData = await axios.post("http://localhost:3001/login", values)
+                                                    
                 window.localStorage.setItem("my_token", loginData.data.token)
 
                 navigate("/userlist") 
@@ -45,7 +46,7 @@ function Login() {
                             />
                         </div>
                         <div className='login'>
-                            <button className='btn btn-primary mt-3 col-lg-3' >Login</button>
+                            <button type="submit" className='btn btn-primary mt-3 col-lg-3' >Login</button>
                         </div>
                         <div className='signup'>
                             <Link to="/register">

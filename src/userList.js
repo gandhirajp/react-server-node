@@ -11,7 +11,8 @@ function UserList() {
 
     let fetchUsers = async () => {
         try {
-            let userData = await axios.get("https://model-react.herokuapp.com/users")
+             let userData = await axios.get("https://model-react.herokuapp.com/users")
+            // let userData = await axios.get("http://localhost:3001/users")
             setUserList(userData.data)
         } catch (error) {
             console.log(error)
