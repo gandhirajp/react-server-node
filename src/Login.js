@@ -13,7 +13,7 @@ function Login() {
         },
         onSubmit: async (values) => {
             try {
-                 let loginData = await axios.post(" https://model-react.herokuapp.com/login", values)
+                 let loginData = await axios.post(" https://mern-model.herokuapp.com//login", values)
                // let loginData = await axios.post("http://localhost:3001/login", values)
                                                     
                 window.localStorage.setItem("my_token", loginData.data.token)

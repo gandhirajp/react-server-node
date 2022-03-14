@@ -11,7 +11,7 @@ function UserList() {
 
     let fetchUsers = async () => {
         try {
-             let userData = await axios.get("https://model-react.herokuapp.com/users")
+             let userData = await axios.get("https://mern-model.herokuapp.com//users")
             // let userData = await axios.get("http://localhost:3001/users")
             setUserList(userData.data)
         } catch (error) {
@@ -23,7 +23,7 @@ function UserList() {
         try {
             let result = window.confirm("are you sure Do you want to Delete! ") 
             if (result) {
-                await axios.delete(`https://model-react.herokuapp.com/user/${id}`)
+                await axios.delete(`https://mern-model.herokuapp.com//user/${id}`)
                
                 fetchUsers()
             }

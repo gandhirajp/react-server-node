@@ -5,7 +5,7 @@ function Dashboard() {
     const [count,setCount]=useState(0)
     useEffect(async() => {
         try {
-            let dashboard=await axios.get("http://localhost:3001/dashboard",{
+            let dashboard=await axios.get("https://mern-model.herokuapp.com//dashboard",{
                 headers:{
                     Authorization: window.localStorage.getItem("my_token")
                 }
